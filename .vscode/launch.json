@@ -1,0 +1,15 @@
+{
+    "configurations": [
+       
+        {
+            "type": "java",
+            "name": "Spring Boot-ReelNetApplication<ReelNet>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.reelnet.ReelNetApplication",
+            "projectName": "ReelNet",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

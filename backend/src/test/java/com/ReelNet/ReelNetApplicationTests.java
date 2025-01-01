@@ -1,4 +1,4 @@
-package com.example.ReelNet;
+package com.ReelNet;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

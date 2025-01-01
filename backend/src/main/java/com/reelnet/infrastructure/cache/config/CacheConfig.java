@@ -9,9 +9,9 @@ import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 @Configuration
 @EnableCaching
 public class CacheConfig {
-    
+
     @Bean
-    public CacheManager cacheManager() {
+    CacheManager cacheManager() {
         return new ConcurrentMapCacheManager();
     }
 } 

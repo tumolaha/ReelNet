@@ -21,9 +21,9 @@ public class OpenApiConfig {
     
     @Value("${api.version:1.0}")
     private String apiVersion;
-    
+
     @Bean
-    public OpenAPI customOpenAPI() {
+    OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
                         .title(applicationName + " API Documentation")

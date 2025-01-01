@@ -55,8 +55,7 @@ public class HealthCheckController extends BaseController {
             allHealthData.put("status", health.getStatus().getCode());
 
             // Add health details if available
-            if (health instanceof CompositeHealth) {
-                CompositeHealth compositeHealth = (CompositeHealth) health;
+            if (health instanceof CompositeHealth compositeHealth) {
                 allHealthData.putAll(compositeHealth.getComponents());
             }
 
@@ -184,8 +183,8 @@ public class HealthCheckController extends BaseController {
         boolean hasWarning = false;
 
         for (Object value : healthData.values()) {
-            if (value instanceof Map) {
-                String status = (String) ((Map<?, ?>) value).get("status");
+            if (value instanceof Map<?, ?> map) {
+                String status = (String) map.get("status");
                 if ("DOWN".equals(status)) {
                     hasDown = true;
                 } else if ("WARNING".equals(status)) {

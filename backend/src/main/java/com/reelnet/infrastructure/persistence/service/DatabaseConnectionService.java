@@ -1,6 +1,7 @@
 package com.reelnet.infrastructure.persistence.service;
 
 import javax.sql.DataSource;
+import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization;
 import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,6 +11,7 @@ import java.sql.DatabaseMetaData;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+@DependsOnDatabaseInitialization
 @Slf4j
 @Service
 @RequiredArgsConstructor

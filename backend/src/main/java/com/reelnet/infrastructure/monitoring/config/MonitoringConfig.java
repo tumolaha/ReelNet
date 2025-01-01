@@ -19,12 +19,12 @@ import java.util.Properties;
 public class MonitoringConfig {
 
     @Bean
-    public TimedAspect timedAspect(MeterRegistry registry) {
+    TimedAspect timedAspect(MeterRegistry registry) {
         return new TimedAspect(registry);
     }
 
     @Bean
-    public WebMvcEndpointHandlerMapping webEndpointHandlerMapping(
+    WebMvcEndpointHandlerMapping webEndpointHandlerMapping(
             WebEndpointDiscoverer endpointDiscoverer,
             EndpointMediaTypes endpointMediaTypes,
             Environment environment) {
@@ -42,13 +42,13 @@ public class MonitoringConfig {
     }
 
     @Bean
-    public HttpExchangeRepository httpTraceRepository() {
+    HttpExchangeRepository httpTraceRepository() {
         return new InMemoryHttpExchangeRepository();
     }
 
     @Bean
     @ConditionalOnMissingBean
-    public BuildProperties buildProperties() {
+    BuildProperties buildProperties() {
         Properties props = new Properties();
         props.setProperty("version", "dev");
         props.setProperty("artifact", "ReelNet");
